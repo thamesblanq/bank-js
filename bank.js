@@ -69,3 +69,6 @@ fCC.teacher = ['Beau', 'Quincy'];
 fCC.website = 'freeCodeCamp.org';
 fCC.changeWebsite('blanq.io');
 console.log(fCC.website);
+
+/* const topicArray = [...fCC.topics]; //REST operator
+console.log(topicArray); */
