@@ -3,22 +3,28 @@ class Account {
         this.balance = balance;
 
         this.credit = function (amount){   // created the credit function
-            this.balance += amount;
+            this.amount = amount;
+            this.balance += this.amount;
             `Credited ${this.amount}`;
         }
 
         this.debit = function (amount){  // created the debit function
-            if (amount > this.balance) { // checks if the amount inputed is greater than the balance
+            this.amount = amount;
+            if (this.amount > this.balance) { // checks if the amount inputed is greater than the balance
                 return 'Insufficient Funds';
             }
             else {
-                this.balance -= amount;
-                `${amount} was debited`;
+                this.balance -= this.amount;
+                `${this.amount} was debited`;
             }
         }
 
         this.getBalance = function (){ // created the getBalance function
-            return (this.balance + this.credit) - this.debit;
+            if (this.credit !== 0){
+                return (this.balance + this.credit) - this.debit;
+            }else {
+                return this.balance -this.debit;
+            }
         }
     };
 };
