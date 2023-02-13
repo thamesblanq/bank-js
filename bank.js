@@ -2,38 +2,43 @@ class Account {
     constructor (balance) {
         this.balance = balance;
 
-        this.credit = function (amount){   // created the credit function
-            this.amount = amount;
+        this.credit = function (creditAmount){   // created the credit function
+            this.amount = creditAmount;
             this.balance += this.amount;
-            `Credited ${this.amount}`;
+             return `Credited ${this.amount}`;
         }
 
-        this.debit = function (amount){  // created the debit function
-            this.amount = amount;
+        this.debit = function (debitAmount){  // created the debit function
+            this.amount = debitAmount;
             if (this.amount > this.balance) { // checks if the amount inputed is greater than the balance
                 return 'Insufficient Funds';
             }
             else {
                 this.balance -= this.amount;
-                `${this.amount} was debited`;
+                 return `${this.amount} was debited`;
             }
         }
 
         this.getBalance = function (){ // created the getBalance function
-            if (this.credit !== 0){
+            return this.balance;
+            /* if (this.credit !== 0){
                 return (this.balance + this.credit) - this.debit;
             }else {
                 return this.balance -this.debit;
-            }
+            } */
         }
     };
 };
 
 const momAccount = new Account(10000);
-let momCredit = momAccount.credit(1000);
+/* let momCredit = momAccount.credit(1000);
 let momDebit = momAccount.debit(2000);
-let momBalance = momAccount.getBalance();
-console.log(momCredit);
+let momBalance = momAccount.getBalance(); */
+console.log(momAccount.debit(1000));
+console.log(momAccount.credit(4000));
+console.log(momAccount.getBalance());
+/* 
+all working now phew! */
 
 
 
@@ -51,15 +56,13 @@ class Tutorials {
             this.website = newWebsite;
         }
         
-        
-        this.addTopic = (newTopic) => {
-            newTopic.split(""); //separates the string with a ""
-            topics.push(newTopic);
-        }
-
         this.removeTopic = (id) => {
-            if (id === topics[id]){
-                return topics[id].pop();
+            if (id <= topics.length){
+                topics.forEach(elNum => {
+                    if (elNum === id) {
+                        topics//method here to delet that el at the specific index
+                    }
+                });// cant use pop here.... trying to remove the element at index (id + 1).... 
             }else {
                 return alert('Input a valid Id');
             }
@@ -74,7 +77,10 @@ fCC.founder = 'Beau';
 fCC.teacher = ['Beau', 'Quincy'];
 fCC.website = 'freeCodeCamp.org';
 fCC.changeWebsite('blanq.io');
-console.log(fCC.website);
+//console.log(fCC.website);
+
+fCC.removeTopic(2);
+console.log(fCC.topics);
 
 /* const topicArray = [...fCC.topics]; //REST operator
 console.log(topicArray); */
