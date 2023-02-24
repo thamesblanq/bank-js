@@ -44,7 +44,7 @@ all working now phew! */
 
 //creating another constructor
 
-class Tutorials {
+/* class Tutorials {
     constructor (name, founder, topics, teachers, website) {
         this.name = name;
         this.founder = founder;
@@ -79,8 +79,8 @@ fCC.website = 'freeCodeCamp.org';
 fCC.changeWebsite('blanq.io');
 //console.log(fCC.website);
 
-fCC.removeTopic(2);
+//fCC.removeTopic(2);
 console.log(fCC.topics);
-
+ */
 /* const topicArray = [...fCC.topics]; //REST operator
 console.log(topicArray); */
