@@ -5,7 +5,7 @@ class Account {
         this.credit = function (creditAmount){   // created the credit function
             this.amount = creditAmount;
             this.balance += this.amount;
-             return `Credited ${this.amount}`;
+             return `Credited $${this.amount}`;
         }
 
         this.debit = function (debitAmount){  // created the debit function
@@ -15,12 +15,12 @@ class Account {
             }
             else {
                 this.balance -= this.amount;
-                 return `${this.amount} was debited`;
+                 return `$${this.amount} was debited`;
             }
         }
 
         this.getBalance = function (){ // created the getBalance function
-            return this.balance;
+            return '$' + this.balance;
             /* if (this.credit !== 0){
                 return (this.balance + this.credit) - this.debit;
             }else {
