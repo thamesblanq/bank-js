@@ -1,6 +1,6 @@
 # Bank App
 
-This whole project is about creating a bank account method which takes in an amount which is balance and also performs other metodes like credit, debit and getBalance. They all return messages to the console.
+This whole project is about creating a bank account method which takes in an amount which is balance and also performs other methods like credit, debit and getBalance. They all return messages to the console.
 
 made my html file
 made my js fie
