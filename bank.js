@@ -60,7 +60,7 @@ all working now phew! */
             if (id <= topics.length){
                 topics.forEach(elNum => {
                     if (elNum === id) {
-                        topics//method here to delet that el at the specific index
+                        topics//method here to delete that el at the specific index
                     }
                 });// cant use pop here.... trying to remove the element at index (id + 1).... 
             }else {
